@@ -12,3 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87d10fe383d1acf4987309943aeaa95c, type: 3}
   m_Name: Path
   m_EditorClassIdentifier: 
+  checkpointsGameObject: {fileID: 8616223864703219936, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  checkpointsList:
+  - {fileID: 8616223863917832426, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864834211610, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864855609441, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864542177443, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864744492908, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223863771462872, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864461265143, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223863874199957, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864441479241, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223865012832346, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223865271725657, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223865620750881, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864120400309, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864366296650, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223864297352959, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
+  - {fileID: 8616223863958929113, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}

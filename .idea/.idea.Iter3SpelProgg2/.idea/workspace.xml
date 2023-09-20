@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f89b0869-1ed6-40fc-8ef0-97a31af48e3a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Iter3SpelProgg2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Iter3SpelProgg2/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemy1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemy1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MoveEnemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MoveEnemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathCeckpoints.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PathCeckpoints.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +93,7 @@
       <workItem from="1695116678843" duration="5000" />
       <workItem from="1695127218423" duration="313000" />
       <workItem from="1695127545903" duration="2661000" />
-      <workItem from="1695227696414" duration="3823000" />
+      <workItem from="1695227696414" duration="5011000" />
     </task>
     <servers />
   </component>
