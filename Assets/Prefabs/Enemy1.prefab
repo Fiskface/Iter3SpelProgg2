@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1995064634958746741}
   - component: {fileID: 4033724757972988912}
-  - component: {fileID: 6684311676446560095}
   - component: {fileID: 2596863477432886109}
   m_Layer: 0
   m_Name: Enemy1
@@ -86,19 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6684311676446560095
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9082616015336822402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e9349797143609498cce5473acfe434, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  checkpointsGameObject: {fileID: 8616223864703219936, guid: ee6a3d84bc020ee49815d385adcc7a36, type: 3}
 --- !u!114 &2596863477432886109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111,3 +97,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b934221dfac26634294743fa7ac24467, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointsSO: {fileID: 11400000, guid: df39d30c75d8d2749955742e93099634, type: 2}
