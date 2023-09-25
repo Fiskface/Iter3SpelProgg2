@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1995064634958746741}
   - component: {fileID: 4033724757972988912}
   - component: {fileID: 2596863477432886109}
+  - component: {fileID: 830324376984421353}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -98,3 +99,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsSO: {fileID: 11400000, guid: df39d30c75d8d2749955742e93099634, type: 2}
+  speed: 3
+--- !u!114 &830324376984421353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082616015336822402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2d09e44c6421c24eb1a8abfc8d58c5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  list: {fileID: 11400000, guid: 201988d2d51093a4baea505414fd18fe, type: 2}
