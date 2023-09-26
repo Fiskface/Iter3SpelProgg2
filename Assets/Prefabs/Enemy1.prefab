@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1995064634958746741}
   - component: {fileID: 4033724757972988912}
+  - component: {fileID: 6056943725222169246}
   - component: {fileID: 2596863477432886109}
   - component: {fileID: 830324376984421353}
   m_Layer: 0
@@ -86,6 +87,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6056943725222169246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082616015336822402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 830ebf836cea1c84da992a990349fdd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moneyChange: {fileID: 11400000, guid: 0c85bdae60d5f0244a34dc97df57ddfc, type: 2}
+  moneyGainOnDeath: 10
 --- !u!114 &2596863477432886109
 MonoBehaviour:
   m_ObjectHideFlags: 0
