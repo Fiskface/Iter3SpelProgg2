@@ -9,6 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d58be8395638bb84ea384dbbc6aba4e7, type: 3}
-  m_Name: MoneyChange
+  m_Script: {fileID: 11500000, guid: 3ed65f9d00bcf3247bbe1a070577d3e3, type: 3}
+  m_Name: MoneyMoneyMoney
   m_EditorClassIdentifier: 

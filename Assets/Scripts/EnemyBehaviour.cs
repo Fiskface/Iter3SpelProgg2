@@ -6,10 +6,12 @@ using UnityEngine;
 
 public class EnemyBehaviour : MonoBehaviour
 {
-    public MoneyChangeObject moneyChange;
     public int moneyGainOnDeath = 10;
 
     public int maxHealth = 5;
+
+    [SerializeField] private GameEventInt gainMoneyEvent;
+    [SerializeField] private Targetable targetable;
     private int currentHealth;
 
     private void Start()
@@ -19,9 +21,25 @@ public class EnemyBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (currentHealth <= 0)
+        if(currentHealth<=0)
         {
-            moneyChange.MoneyChange(moneyGainOnDeath);
+            gainMoneyEvent.Raise(gameObject, moneyGainOnDeath);
+            Destroy(gameObject);
         }
+    }
+
+    private void TakeDamage(int damage)
+    {
+        currentHealth -= damage;
+    }
+
+    private void OnEnable()
+    {
+        targetable.hit += TakeDamage;
+    }
+
+    private void OnDisable()
+    {
+        targetable.hit -= TakeDamage;
     }
 }

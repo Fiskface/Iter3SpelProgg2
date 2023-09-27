@@ -16,7 +16,7 @@ public class ShootManager : MonoBehaviour
     {
         if (canShoot && chooseTarget.target != null)
         {
-            shootParent.Shoot(chooseTarget.target);
+            shootParent.Shoot(chooseTarget.target, towerStats.damage);
             canShoot = false;
             StartCoroutine(ShootCooldown());
         }

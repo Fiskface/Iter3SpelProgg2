@@ -18,4 +18,14 @@ public static class MyMath
 
         return false;
     }
+
+    public static bool Close(Vector3 position, Vector3 goal)
+    {
+        if ((position - goal).magnitude < 0.05)
+        {
+            return true;
+        }
+
+        return false;
+    }
 }

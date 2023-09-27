@@ -4,5 +4,5 @@ using UnityEngine;
 
 public abstract class ShootParent : MonoBehaviour
 {
-    public abstract void Shoot(GameObject target);
+    public abstract void Shoot(GameObject target, int damage);
 }

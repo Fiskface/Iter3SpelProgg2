@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6056943725222169246}
   - component: {fileID: 2596863477432886109}
   - component: {fileID: 830324376984421353}
+  - component: {fileID: 6668984850824894561}
   m_Layer: 0
   m_Name: Enemy1
   m_TagString: Untagged
@@ -99,8 +100,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 830ebf836cea1c84da992a990349fdd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moneyChange: {fileID: 11400000, guid: 0c85bdae60d5f0244a34dc97df57ddfc, type: 2}
   moneyGainOnDeath: 10
+  maxHealth: 5
+  gainMoneyEvent: {fileID: 11400000, guid: 019e3b9100f0df54389118a8a8125295, type: 2}
+  targetable: {fileID: 6668984850824894561}
 --- !u!114 &2596863477432886109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +131,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   list: {fileID: 11400000, guid: 201988d2d51093a4baea505414fd18fe, type: 2}
+--- !u!114 &6668984850824894561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082616015336822402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46eb1f8f380b124f984de7cd9544f14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
