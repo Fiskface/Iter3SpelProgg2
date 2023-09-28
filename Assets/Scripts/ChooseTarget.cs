@@ -10,12 +10,6 @@ public class ChooseTarget : MonoBehaviour
 
     private List<GameObject> enemiesInRange = new List<GameObject>();
     public GameObject target;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -215,6 +215,7 @@ GameObject:
   - component: {fileID: 68601994421637375}
   - component: {fileID: 6198350340223370772}
   - component: {fileID: 7167695358991219458}
+  - component: {fileID: 8220261270356057509}
   - component: {fileID: 7864441645306037446}
   m_Layer: 0
   m_Name: Tower1
@@ -307,6 +308,7 @@ MonoBehaviour:
   range: 2.5
   shootCooldown: 0.5
   damage: 1
+  cost: 100
   RangeIndicator: {fileID: 1722659165}
   selectTowerEvent: {fileID: 11400000, guid: 2320b615a1353f74294c83c44cd33734, type: 2}
 --- !u!114 &7105506868111589451
@@ -328,10 +330,10 @@ MonoBehaviour:
       - m_Target: {fileID: 6278432091263361791}
         m_TargetAssemblyTypeName: TowerStats, Assembly-CSharp
         m_MethodName: OnSelectTower
-        m_Mode: 2
+        m_Mode: 0
         m_Arguments:
-          m_ObjectArgument: {fileID: 5035232705844878986}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -344,7 +346,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5035232705844878986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 701a808f72d656043811fea2f39f72e8, type: 3}
   m_Name: 
@@ -383,6 +385,22 @@ MonoBehaviour:
   bullet: {fileID: 108134615495868877, guid: 0e71617ace82fcd418067a21a38f5cd9, type: 3}
   shootPositions:
   - {fileID: 3785295481583700287}
+--- !u!114 &8220261270356057509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035232705844878986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a108a6f846ca3274f9cc266e07d473d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ChooseTarget: {fileID: 68601994421637375}
+  TowerStats: {fileID: 6278432091263361791}
+  moneyCounter: {fileID: 11400000, guid: 07138d1833a384049b758226063a7ccb, type: 2}
+  BuyTowerEvent: {fileID: 11400000, guid: 52f6f1c2e58a2db4082e6afaeb751d5f, type: 2}
 --- !u!61 &7864441645306037446
 BoxCollider2D:
   m_ObjectHideFlags: 0

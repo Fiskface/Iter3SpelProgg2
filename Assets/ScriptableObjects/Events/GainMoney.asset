@@ -10,5 +10,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3ed65f9d00bcf3247bbe1a070577d3e3, type: 3}
-  m_Name: MoneyMoneyMoney
+  m_Name: GainMoney
   m_EditorClassIdentifier: 

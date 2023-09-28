@@ -12,6 +12,7 @@ public class RoundManager : MonoBehaviour
     public IntSO roundCounter;
     public ListScriptObj aliveEnemies;
     public List<GameObject> enemiesThatCanSpawn;
+    public PathCheckpoints checkPoints;
 
     private List<GameObject> enemiesToSpawn = new List<GameObject>();
     private bool canSpawn = true;
@@ -42,7 +43,7 @@ public class RoundManager : MonoBehaviour
     {
         if (enemiesToSpawn.Count > 0 && canSpawn)
         {
-            Instantiate(enemiesToSpawn[0]);
+            Instantiate(enemiesToSpawn[0], checkPoints.GetNextCheckpoint(-1).position, Quaternion.identity);
             enemiesToSpawn.RemoveAt(0);
             canSpawn = false;
             StartCoroutine(SpawnCooldown());

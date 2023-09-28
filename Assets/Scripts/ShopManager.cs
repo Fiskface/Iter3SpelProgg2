@@ -10,6 +10,8 @@ public class ShopManager : MonoBehaviour
 
     public int startMoney = 250;
 
+    private GameObject currentlyTryingToBuy;
+
     private void Start()
     {
         moneyCounter.value = startMoney;
@@ -18,5 +20,17 @@ public class ShopManager : MonoBehaviour
     public void OnMoneyChange(GameObject gameObject, int money)
     {
         moneyCounter.value += money;
+    }
+
+    public void GetTowerOnMouse(GameObject prefab)
+    {
+        Destroy(currentlyTryingToBuy);
+        currentlyTryingToBuy = Instantiate(prefab);
+    }
+
+    public void BuyTower(GameObject gObject, int cost)
+    {
+        moneyCounter.value -= cost;
+        currentlyTryingToBuy = null;
     }
 }

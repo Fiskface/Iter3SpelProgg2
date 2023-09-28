@@ -9,6 +9,7 @@ public class TowerStats : MonoBehaviour
     public float range = 5f;
     public float shootCooldown = 1f;
     public int damage = 1;
+    public int cost;
     
     public GameObject RangeIndicator;
     
@@ -20,6 +21,8 @@ public class TowerStats : MonoBehaviour
     private void Start()
     {
         RISR = RangeIndicator.GetComponent<SpriteRenderer>();
+        UpdateTowerRange();
+        selectTowerEvent.Raise(gameObject, 0);
     }
 
     private void OnMouseDown()
@@ -27,22 +30,24 @@ public class TowerStats : MonoBehaviour
         if (canSelect)
         {
             selectTowerEvent.Raise(gameObject, 0);
-            
         }
     }
 
-    public void OnSelectTower(GameObject tower)
+    public void OnSelectTower(GameObject tower, int value)
     {
-        Debug.Log(tower.name);
-        if (gameObject == tower)
+        if (tower == gameObject)
         {
             RISR.enabled = true;
-            Debug.Log("1");
         }
         else
         {
             RISR.enabled = false;
-            Debug.Log("2");
         }
+    }
+
+    public void UpdateTowerRange()
+    {
+        var rangeTimesTwo = range * 2;
+        RangeIndicator.transform.localScale = new Vector3(rangeTimesTwo, rangeTimesTwo, rangeTimesTwo);
     }
 }
