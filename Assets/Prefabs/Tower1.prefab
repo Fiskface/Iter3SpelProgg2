@@ -211,9 +211,11 @@ GameObject:
   - component: {fileID: 3152404500609414413}
   - component: {fileID: 3414193177016162738}
   - component: {fileID: 6278432091263361791}
+  - component: {fileID: 7105506868111589451}
   - component: {fileID: 68601994421637375}
   - component: {fileID: 6198350340223370772}
   - component: {fileID: 7167695358991219458}
+  - component: {fileID: 7864441645306037446}
   m_Layer: 0
   m_Name: Tower1
   m_TagString: Untagged
@@ -305,6 +307,36 @@ MonoBehaviour:
   range: 2.5
   shootCooldown: 0.5
   damage: 1
+  RangeIndicator: {fileID: 1722659165}
+  selectTowerEvent: {fileID: 11400000, guid: 2320b615a1353f74294c83c44cd33734, type: 2}
+--- !u!114 &7105506868111589451
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035232705844878986}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 036179e1a4c605746a1c66e0608cb758, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 2320b615a1353f74294c83c44cd33734, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6278432091263361791}
+        m_TargetAssemblyTypeName: TowerStats, Assembly-CSharp
+        m_MethodName: OnSelectTower
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5035232705844878986}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &68601994421637375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -351,3 +383,29 @@ MonoBehaviour:
   bullet: {fileID: 108134615495868877, guid: 0e71617ace82fcd418067a21a38f5cd9, type: 3}
   shootPositions:
   - {fileID: 3785295481583700287}
+--- !u!61 &7864441645306037446
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5035232705844878986}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.75, y: 0.75}
+  m_EdgeRadius: 0

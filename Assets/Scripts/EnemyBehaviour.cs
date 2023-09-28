@@ -23,9 +23,14 @@ public class EnemyBehaviour : MonoBehaviour
     {
         if(currentHealth<=0)
         {
-            gainMoneyEvent.Raise(gameObject, moneyGainOnDeath);
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        gainMoneyEvent.Raise(gameObject, moneyGainOnDeath);
+        Destroy(gameObject);
     }
 
     private void TakeDamage(int damage)

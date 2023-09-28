@@ -12,6 +12,10 @@ public class MoveEnemy : MonoBehaviour
 
     [SerializeField] private float speed = 3f;
 
+    [SerializeField] private int DamageWhenSlippingThrough = 1;
+    [SerializeField] private GameEventInt sendDamageEvent;
+    
+
     private Vector3 movingTowards;
 
     private Vector3 direction;
@@ -52,6 +56,7 @@ public class MoveEnemy : MonoBehaviour
 
     private void EnemyAtLastCheckpoint()
     {
-        Debug.Log("Kill me");
+        sendDamageEvent.Raise(gameObject,-DamageWhenSlippingThrough);
+        Destroy(gameObject);
     }
 }
