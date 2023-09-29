@@ -13,7 +13,7 @@ public class PlacingTowerScript : MonoBehaviour
     public IntSO moneyCounter;
     public GameEventInt BuyTowerEvent;
 
-    private List<Collision2D> blocking = new List<Collision2D>();
+    private List<Collider2D> blocking = new List<Collider2D>();
 
     void Awake()
     {
@@ -40,13 +40,12 @@ public class PlacingTowerScript : MonoBehaviour
         enabled = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         blocking.Add(other);
-        Debug.Log(other.gameObject.name);
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnTriggerExit2D(Collider2D other)
     {
         blocking.Remove(other);
     }
