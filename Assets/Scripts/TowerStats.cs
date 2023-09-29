@@ -14,7 +14,6 @@ public class TowerStats : MonoBehaviour
     public GameObject RangeIndicator;
     
     private SpriteRenderer RISR;
-    private bool canSelect = true;
 
     public GameEventInt selectTowerEvent;
 
@@ -25,12 +24,21 @@ public class TowerStats : MonoBehaviour
         selectTowerEvent.Raise(gameObject, 0);
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButton(0))
+        {
+            //TODO: Fixa so man kan unselecta.
+            //selectTowerEvent.Raise(null, 0);
+        }
+        
+    }
+
+
+
     private void OnMouseDown()
     {
-        if (canSelect)
-        {
-            selectTowerEvent.Raise(gameObject, 0);
-        }
+        selectTowerEvent.Raise(gameObject, 0);
     }
 
     public void OnSelectTower(GameObject tower, int value)
@@ -49,5 +57,27 @@ public class TowerStats : MonoBehaviour
     {
         var rangeTimesTwo = range * 2;
         RangeIndicator.transform.localScale = new Vector3(rangeTimesTwo, rangeTimesTwo, rangeTimesTwo);
+    }
+
+    public void OnUpgradeTower(GameObject gObject, int upgrade)
+    {
+        if (gObject == gameObject)
+        {
+            switch(upgrade) 
+            {
+                case 1:
+                    UpgradeRange();
+                    break;
+                case 2:
+                    // code block
+                    break;
+            }
+        }
+    }
+
+    private void UpgradeRange()
+    {
+        range += 1;
+        UpdateTowerRange();
     }
 }

@@ -10,14 +10,17 @@ public class ShopManager : MonoBehaviour
 
     public int startMoney = 250;
 
+    public GameEventInt upgradeTower;
+
     private GameObject currentlyTryingToBuy;
+    private GameObject highlightedTower;
 
     private void Start()
     {
         moneyCounter.value = startMoney;
     }
 
-    public void OnMoneyChange(GameObject gameObject, int money)
+    public void OnMoneyChange(GameObject gObject, int money)
     {
         moneyCounter.value += money;
     }
@@ -32,5 +35,20 @@ public class ShopManager : MonoBehaviour
     {
         moneyCounter.value -= cost;
         currentlyTryingToBuy = null;
+    }
+
+    public void SelectTower(GameObject gObject, int inter)
+    {
+        highlightedTower = gObject;
+    }
+
+    public void UpgradeTower(int upgrade)
+    {
+        upgradeTower.Raise(highlightedTower, upgrade);
+    }
+
+    public void UpgradeTowerLoseMoney(int money)
+    {
+        moneyCounter.value -= money;
     }
 }
