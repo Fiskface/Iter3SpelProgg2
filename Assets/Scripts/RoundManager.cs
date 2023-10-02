@@ -75,7 +75,7 @@ public class RoundManager : MonoBehaviour
                     
                 }
             }
-            healthMultiplier.value += 0.05f;
+            healthMultiplier.value += 0.08f;
             timeBetweenSpawns *= timeBetweenSpawnsReduction;
             StartCoroutine(WaitBetweenRounds());
         }
