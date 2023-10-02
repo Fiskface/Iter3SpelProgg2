@@ -12,11 +12,13 @@ public class EnemyBehaviour : MonoBehaviour
 
     [SerializeField] private GameEventInt gainMoneyEvent;
     [SerializeField] private Targetable targetable;
+    public FloatSO healthMultiplier;
     private int currentHealth;
 
-    private void Start()
+    private void Awake()
     {
-        currentHealth = maxHealth;
+        currentHealth = (int)(maxHealth * healthMultiplier.value);
+        targetable.calculatedHealth = currentHealth;
     }
 
     private void Update()

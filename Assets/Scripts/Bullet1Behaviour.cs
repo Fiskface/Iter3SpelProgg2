@@ -6,13 +6,15 @@ using UnityEngine;
 public class Bullet1Behaviour : MonoBehaviour
 {
     public GameObject target;
+    public Targetable targetTargetable;
     [NonSerialized] public int damage = 0;
     public float speed;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        targetTargetable = target.GetComponent<Targetable>();
+        targetTargetable.calculatedHealth -= damage;
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class Bullet1Behaviour : MonoBehaviour
         transform.position +=  speed * Time.deltaTime * (target.transform.position - transform.position).normalized;
         if (MyMath.Close(transform.position, target.transform.position))
         {
-            target.GetComponent<Targetable>().hit(damage);
+            targetTargetable.hit(damage);
             Destroy(gameObject);
         }
     }

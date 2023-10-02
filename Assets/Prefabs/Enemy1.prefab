@@ -104,6 +104,7 @@ MonoBehaviour:
   maxHealth: 1
   gainMoneyEvent: {fileID: 11400000, guid: 019e3b9100f0df54389118a8a8125295, type: 2}
   targetable: {fileID: 6668984850824894561}
+  healthMultiplier: {fileID: 11400000, guid: 621af733708a9eb4fad71f4a57b71a7f, type: 2}
 --- !u!114 &2596863477432886109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsSO: {fileID: 11400000, guid: df39d30c75d8d2749955742e93099634, type: 2}
-  speed: 3
+  speed: 5
   DamageWhenSlippingThrough: 1
   sendDamageEvent: {fileID: 11400000, guid: 253da50c297068e4a9ca0413e92dff36, type: 2}
 --- !u!114 &830324376984421353
@@ -145,3 +146,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f46eb1f8f380b124f984de7cd9544f14, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  calculatedHealth: 0

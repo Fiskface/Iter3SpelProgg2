@@ -9,10 +9,17 @@ public class RoundManager : MonoBehaviour
     public float timeBetweenSpawns;
     [Range(0,1)] public float timeBetweenSpawnsReduction = 0.99f;
     public float timeBetweenRounds = 3;
+    public FloatSO healthMultiplier;
     public IntSO roundCounter;
     public ListScriptObj aliveEnemies;
     public List<GameObject> enemiesThatCanSpawn;
     public PathCheckpoints checkPoints;
+
+    private int firstEnemyHarder = 2;
+    private int secondEnemyHarder = 5;
+    private int thirdEnemyHarder = 10;
+
+    private List<int> enemyHarderList = new List<int>();
 
     private List<GameObject> enemiesToSpawn = new List<GameObject>();
     private bool canSpawn = true;
@@ -20,6 +27,10 @@ public class RoundManager : MonoBehaviour
     
     private void Start()
     {
+        enemyHarderList.Add(firstEnemyHarder);
+        enemyHarderList.Add(secondEnemyHarder);
+        enemyHarderList.Add(thirdEnemyHarder);
+        healthMultiplier.value = 1;
         roundCounter.value = 1;
     }
 
@@ -55,6 +66,16 @@ public class RoundManager : MonoBehaviour
         if (aliveEnemies.list.Count <= 0 && enemiesToSpawn.Count <= 0)
         {
             roundCounter.value++;
+            if (roundCounter.value % 12 == 0)
+            {
+                for (int i = 0; i < enemyHarderList.Count; i++)
+                {
+                    if(enemyHarderList[i] > 1)
+                        enemyHarderList[i] -= 1;
+                    
+                }
+            }
+            healthMultiplier.value += 0.05f;
             timeBetweenSpawns *= timeBetweenSpawnsReduction;
             StartCoroutine(WaitBetweenRounds());
         }
@@ -70,13 +91,17 @@ public class RoundManager : MonoBehaviour
                 enemiesToSpawn.Add(enemiesThatCanSpawn[0]);
             }
 
-            
-            if (i % 5 == 0)
+            if (i % thirdEnemyHarder == 0)
+            {
+                enemiesToSpawn.Add(enemiesThatCanSpawn[3]);
+                continue;
+            }
+            if (i % secondEnemyHarder == 0)
             {
                 enemiesToSpawn.Add(enemiesThatCanSpawn[2]);
                 continue;
             }
-            if (i % 2 == 0)
+            if (i % firstEnemyHarder == 0)
             {
                 enemiesToSpawn.Add(enemiesThatCanSpawn[1]);
                 continue;

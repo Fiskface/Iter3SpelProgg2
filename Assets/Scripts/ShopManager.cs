@@ -20,6 +20,14 @@ public class ShopManager : MonoBehaviour
         moneyCounter.value = startMoney;
     }
 
+    private void Update()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            Destroy(currentlyTryingToBuy);
+        }
+    }
+
     public void OnMoneyChange(GameObject gObject, int money)
     {
         moneyCounter.value += money;
@@ -50,5 +58,10 @@ public class ShopManager : MonoBehaviour
     public void UpgradeTowerLoseMoney(int money)
     {
         moneyCounter.value -= money;
+    }
+
+    public void RemoveTower()
+    {
+        Destroy(highlightedTower);
     }
 }

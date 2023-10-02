@@ -10,6 +10,8 @@ public class TowerStats : MonoBehaviour
     public float shootCooldown = 1f;
     public int damage = 1;
     public int cost;
+
+    [NonSerialized] public bool hasBeenPlaced = false;
     
     public GameObject RangeIndicator;
     
@@ -21,24 +23,13 @@ public class TowerStats : MonoBehaviour
     {
         RISR = RangeIndicator.GetComponent<SpriteRenderer>();
         UpdateTowerRange();
-        selectTowerEvent.Raise(gameObject, 0);
+        selectTowerEvent.Raise(gameObject, 1);
     }
-
-    private void Update()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            //TODO: Fixa so man kan unselecta.
-            //selectTowerEvent.Raise(null, 0);
-        }
-        
-    }
-
-
 
     private void OnMouseDown()
     {
-        selectTowerEvent.Raise(gameObject, 0);
+        if(hasBeenPlaced)
+            selectTowerEvent.Raise(gameObject, 0);
     }
 
     public void OnSelectTower(GameObject tower, int value)
@@ -69,7 +60,10 @@ public class TowerStats : MonoBehaviour
                     UpgradeRange();
                     break;
                 case 2:
-                    // code block
+                    UpgradeDamage();
+                    break;
+                case 3:
+                    UpgradeAttackSpeed();
                     break;
             }
         }
@@ -77,7 +71,17 @@ public class TowerStats : MonoBehaviour
 
     private void UpgradeRange()
     {
-        range += 1;
+        range += 0.5f;
         UpdateTowerRange();
+    }
+
+    private void UpgradeDamage()
+    {
+        damage++;
+    }
+
+    private void UpgradeAttackSpeed()
+    {
+        shootCooldown *= 0.9f;
     }
 }

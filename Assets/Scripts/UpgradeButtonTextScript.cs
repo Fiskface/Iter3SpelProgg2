@@ -10,7 +10,6 @@ public class UpgradeButtonTextScript : MonoBehaviour
     public IntSO moneyCounter;
     public string upgradeName;
     public int cost;
-    public GameObject towerToUpgrade;
 
     public Button button;
     public TextMeshProUGUI text;

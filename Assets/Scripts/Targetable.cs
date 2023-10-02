@@ -5,6 +5,8 @@ using UnityEngine.Events;
 
 public class Targetable : MonoBehaviour
 {
+    public int calculatedHealth;
+    
     public UnityAction<int> hit = delegate {};
     
 }

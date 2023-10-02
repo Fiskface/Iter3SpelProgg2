@@ -8,7 +8,7 @@ public class ChooseTarget : MonoBehaviour
     [SerializeField] private ListScriptObj enemyList;
     [SerializeField] private TowerStats towerStats;
 
-    private List<GameObject> enemiesInRange = new List<GameObject>();
+    private List<Targetable> enemiesInRangeTargetable = new List<Targetable>();
     public GameObject target;
 
     // Update is called once per frame
@@ -20,21 +20,34 @@ public class ChooseTarget : MonoBehaviour
 
     private void CheckForEnemiesInRange()
     {
-        enemiesInRange.Clear();
+        enemiesInRangeTargetable.Clear();
         foreach (var enemy in enemyList.list)
         {
             if ((transform.position - enemy.transform.position).magnitude < towerStats.range)
             {
-                enemiesInRange.Add(enemy);
+                if(enemy.TryGetComponent<Targetable>(out Targetable targetable))
+                {
+                    enemiesInRangeTargetable.Add(targetable);
+                }
             }
         }
     }
 
     private void FindCurrentTarget()
     {
-        if (enemiesInRange.Count > 0)
+        
+        if (enemiesInRangeTargetable.Count > 0)
         {
-            target = enemiesInRange[0];
+            for (int i = 0; i < enemiesInRangeTargetable.Count; i++)
+            {
+                if (enemiesInRangeTargetable[i].calculatedHealth > 0)
+                {
+                    target = enemiesInRangeTargetable[i].gameObject;
+                    break;
+                }
+                target = null;
+            }
+            
         }
         else
         {

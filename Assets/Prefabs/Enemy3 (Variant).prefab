@@ -68,12 +68,8 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2596863477432886109, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
-      propertyPath: speed
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2596863477432886109, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: DamageWhenSlippingThrough
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4033724757972988912, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: m_Sprite
@@ -82,6 +78,10 @@ PrefabInstance:
     - target: {fileID: 6056943725222169246, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: maxHealth
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056943725222169246, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
+      propertyPath: moneyGainOnDeath
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 9082616015336822402, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: m_Name
