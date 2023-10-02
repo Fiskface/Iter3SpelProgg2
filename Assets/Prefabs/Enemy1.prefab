@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointsSO: {fileID: 11400000, guid: df39d30c75d8d2749955742e93099634, type: 2}
-  speed: 5
+  speed: 4
   DamageWhenSlippingThrough: 1
   sendDamageEvent: {fileID: 11400000, guid: 253da50c297068e4a9ca0413e92dff36, type: 2}
 --- !u!114 &830324376984421353
