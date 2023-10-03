@@ -10,6 +10,7 @@ public class RoundManager : MonoBehaviour
     [Range(0,1)] public float timeBetweenSpawnsReduction = 0.99f;
     public float timeBetweenRounds = 3;
     public FloatSO healthMultiplier;
+    public float healthMultiplierAddPerRound = 0.05f;
     public IntSO roundCounter;
     public ListScriptObj aliveEnemies;
     public List<GameObject> enemiesThatCanSpawn;
@@ -75,7 +76,7 @@ public class RoundManager : MonoBehaviour
                     
                 }
             }
-            healthMultiplier.value += 0.08f;
+            healthMultiplier.value *= 1+healthMultiplierAddPerRound;
             timeBetweenSpawns *= timeBetweenSpawnsReduction;
             StartCoroutine(WaitBetweenRounds());
         }

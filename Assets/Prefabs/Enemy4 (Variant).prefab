@@ -77,7 +77,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: de8880168822182448d9f2346c658560, type: 3}
     - target: {fileID: 6056943725222169246, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: maxHealth
-      value: 60
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6056943725222169246, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: moneyGainOnDeath

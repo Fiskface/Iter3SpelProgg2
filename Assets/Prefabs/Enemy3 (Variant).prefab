@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6056943725222169246, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: moneyGainOnDeath
-      value: 30
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 9082616015336822402, guid: b331ee27775c7dd4a8fa03dc9744fd6b, type: 3}
       propertyPath: m_Name

@@ -807,6 +807,7 @@ MonoBehaviour:
   timeBetweenSpawnsReduction: 0.96
   timeBetweenRounds: 3
   healthMultiplier: {fileID: 11400000, guid: 621af733708a9eb4fad71f4a57b71a7f, type: 2}
+  healthMultiplierAddPerRound: 0.08
   roundCounter: {fileID: 11400000, guid: e55ae62371aace241a19d191c1aaa6ad, type: 2}
   aliveEnemies: {fileID: 11400000, guid: 201988d2d51093a4baea505414fd18fe, type: 2}
   enemiesThatCanSpawn:
